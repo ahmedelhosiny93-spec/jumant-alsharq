@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>جمانة الشرق | صالون نسائي فاخر — الرياض</title>
+<meta name="description" content="جمانة الشرق — قص وتصفيف، حمام مغربي، وعناية نسائية فاخرة بخصوصية تامة في الرياض. احجزي موعدك أونلاين.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
+:root{--rose:#b76e79;--rose-d:#8e4b56;--gold:#d4af7a;--bg:#fdf9f7;--ink:#3a2c2e}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Cairo',sans-serif}
+body{background:var(--bg);color:var(--ink);overflow-x:hidden}
+.hero{min-height:92vh;background:linear-gradient(rgba(62,32,38,.45),rgba(62,32,38,.85)),url(main.jpg) center/cover;color:#fff;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:40px 20px;position:relative}
+.hero>*{position:relative;z-index:1}
+.badge{display:inline-block;border:1px solid var(--gold);color:var(--gold);background:rgba(62,32,38,.5);padding:8px 20px;border-radius:30px;font-size:.85rem;margin-bottom:22px;opacity:0;animation:fadeUp 1s .2s forwards}
+.hero h1{font-size:2.5rem;font-weight:900;opacity:0;animation:fadeUp 1s .5s forwards;background:linear-gradient(90deg,#fff,var(--gold),#fff);background-size:200%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:fadeUp 1s .5s forwards,shine 4s 1.5s linear infinite}
+@keyframes shine{to{background-position:200%}}
+.hero h1 span{display:block;font-size:.95rem;font-weight:600;letter-spacing:5px;margin-top:8px}
+.hero p{margin:18px 0 30px;opacity:0;max-width:440px;color:#f5e6e0;animation:fadeUp 1s .8s forwards}
+.cta{background:linear-gradient(135deg,var(--rose),var(--rose-d));color:#fff;border:none;padding:16px 46px;border-radius:50px;font-size:1.1rem;font-weight:700;cursor:pointer;opacity:0;animation:fadeUp 1s 1.1s forwards,pulse 2.5s 2s infinite;font-family:inherit;transition:transform .3s}
+.cta:hover{transform:scale(1.07)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{box-shadow:0 10px 30px rgba(183,110,121,.5)}50%{box-shadow:0 10px 44px rgba(183,110,121,.85)}}
+.ticker{background:linear-gradient(90deg,var(--rose-d),var(--rose));color:#fff;overflow:hidden;padding:12px 0;white-space:nowrap}
+.ticker div{display:inline-block;animation:slide 18s linear infinite;font-weight:700;font-size:.95rem}
+@keyframes slide{from{transform:translateX(100%)}to{transform:translateX(-100%)}}
+.stats{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;padding:26px 16px;max-width:600px;margin:auto}
+.stat{flex:1;min-width:100px;background:#fff;border-radius:20px;padding:16px 10px;text-align:center;box-shadow:0 12px 30px rgba(142,75,86,.13);opacity:0;transform:translateY(40px);transition:.7s}
+.stat.show{opacity:1;transform:translateY(0)}
+.stat b{display:block;font-size:1.55rem;color:var(--rose);font-weight:900}
+.stat span{font-size:.78rem;color:#999}
+.rev{opacity:0;transform:translateY(46px);transition:.8s cubic-bezier(.2,.7,.3,1)}
+.rev.show{opacity:1;transform:translateY(0)}
+.wrap{max-width:600px;margin:auto;padding:0 16px}
+h2.sec{font-weight:900;font-size:1.5rem;margin:38px 0 6px;color:var(--rose-d);text-align:center}
+.sub{text-align:center;color:#b0939a;font-size:.9rem;margin-bottom:22px}
+.srv{background:#fff;border-radius:22px;padding:14px;margin-bottom:14px;display:flex;gap:14px;align-items:center;box-shadow:0 8px 24px rgba(142,75,86,.08);transition:.35s}
+.srv:hover{transform:translateY(-6px) rotate(-.5deg);box-shadow:0 18px 40px rgba(142,75,86,.18)}
+.srv img{width:86px;height:86px;object-fit:cover;border-radius:16px;flex:0 0 86px}
+.srv h3{font-size:1rem}.srv small{color:#999;font-size:.78rem;display:block}
+.srv .p{color:var(--rose);font-weight:900;white-space:nowrap;margin-inline-start:auto}
+.bookbtn{border:2px solid var(--rose);color:var(--rose);background:none;padding:8px 16px;border-radius:30px;font-weight:700;cursor:pointer;font-family:inherit;font-size:.82rem;margin-inline-start:8px;transition:.3s}
+.bookbtn:hover{background:var(--rose);color:#fff}
+.offer{background:linear-gradient(135deg,#3e2026,#6b3540);color:#fff;border-radius:24px;padding:22px;margin-bottom:14px;position:relative;overflow:hidden;transition:.4s}
+.offer:hover{transform:scale(1.02)}
+.offer .tag{position:absolute;top:14px;left:14px;background:var(--gold);color:#3e2026;font-size:.75rem;font-weight:900;padding:4px 12px;border-radius:20px}
+.offer h3{font-size:1.1rem;margin-bottom:6px}
+.offer p{font-size:.85rem;color:#ecd9d5}
+.offer .pr{font-size:1.4rem;font-weight:900;color:var(--gold);margin-top:10px}
+.offer .old{text-decoration:line-through;font-size:.85rem;opacity:.55;font-weight:400}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:10px}
+.g{border-radius:20px;overflow:hidden;transition:.4s}
+.g img{width:100%;height:150px;object-fit:cover;display:block}
+.g:hover{transform:scale(1.05) rotate(.5deg)}
+.tst{background:linear-gradient(135deg,#fff,#fbeef0);border-radius:22px;padding:18px;margin-bottom:14px;box-shadow:0 8px 24px rgba(142,75,86,.07)}
+.tst .stars{color:var(--gold);font-size:.95rem}
+.tst p{font-size:.9rem;margin-top:6px;color:#666}
+.tst b{font-size:.85rem;color:var(--rose-d)}
+details{background:#fff;border-radius:18px;padding:16px;margin-bottom:10px;box-shadow:0 6px 18px rgba(142,75,86,.06)}
+summary{font-weight:700;color:var(--rose-d);cursor:pointer}
+details p{font-size:.88rem;color:#777;margin-top:8px}
+form{background:#fff;border-radius:26px;padding:24px;box-shadow:0 14px 40px rgba(142,75,86,.14);margin-bottom:26px}
+input,select,textarea{width:100%;padding:14px;margin-bottom:12px;border:1.5px solid #efd9dd;border-radius:16px;font-size:.95rem;font-family:inherit;background:#fffafa;transition:.3s}
+input:focus,select:focus{border-color:var(--rose);outline:none;box-shadow:0 0 0 4px rgba(183,110,121,.14)}
+.wa{background:#25d366;color:#fff;border:none;padding:15px;border-radius:16px;font-size:1.05rem;font-weight:900;width:100%;cursor:pointer;font-family:inherit;margin-bottom:10px}
+.pay{background:linear-gradient(135deg,#5b2a86,#3c1d5c);color:#fff}
+.foot{background:#3e2026;color:#ecd9d5;text-align:center;padding:28px 16px;font-size:.85rem;border-radius:40px 40px 0 0}
+.fab{position:fixed;bottom:18px;left:18px;width:60px;height:60px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.8rem;text-decoration:none;box-shadow:0 10px 26px rgba(37,211,102,.5);z-index:9}
+</style>
+</head>
+<body>
+<div class="hero">
+<span class="badge">✨ صالون نسائي — خصوصية تامة</span>
+<h1>جمانة الشرق<span>JUMANT ALSHARQ</span></h1>
+<p>قص وتصفيف، حمام مغربي ملكي، وعناية نسائية فاخرة في أجواء هادئة — احجزي موعدك في دقيقة</p>
+<button class="cta" onclick="document.getElementById('book').scrollIntoView({behavior:'smooth'})">📅 احجزي موعدك الآن</button>
+</div>
+<div class="ticker"><div>قص وتصفيف ✦ سشوار ملكي ✦ حمام مغربي ✦ صبغات وهايلايت ✦ بروتين معالج ✦ عناية بالأظافر ✦ كبائن خصوصية ✦ ضيافة فاخرة ✦&nbsp;</div></div>
+<div class="stats">
+<div class="stat"><b class="cnt" data-n="5">0</b><span>نجوم تجربتنا</span></div>
+<div class="stat"><b><span class="cnt" data-n="1000">0</span>+</b><span>عميلة سعيدة</span></div>
+<div class="stat"><b class="cnt" data-n="100">0</b><span>% خصوصية وأمان</span></div>
+</div>
+<div class="wrap">
+<h2 class="sec rev">عروضنا 🎁</h2><p class="sub rev">وفّري مع الباقات المميزة</p>
+<div class="offer rev"><span class="tag">عرض الأسبوع</span><h3>الحمام المغربي الملكي 🌹</h3><p>صنفرة بالورد + صابون بلدي + شموع وأجواء استرخاء كاملة</p><div class="pr">150 ر.س <span class="old">200 ر.س</span></div></div>
+<div class="offer rev"><h3>باقة العروس 👰</h3><p>مكياج + تسريحة + حمام مغربي + عناية بالبشرة</p><div class="pr">1,200 ر.س <span class="old">1,600 ر.س</span></div></div>
+<h2 class="sec rev">خدماتنا</h2><p class="sub rev">أسعار شفافة — على أيدي خبيرات</p>
+<div class="srv rev"><img src="blow.jpg" alt="تصفيف"><div><h3>سشوار وتصفيف</h3><small>غسيل + سشوار + لمسات نهائية</small></div><span class="p">43 ر.س+</span><button class="bookbtn" onclick="pick('سشوار وتصفيف')">احجزي</button></div>
+<div class="srv rev"><img src="bath.jpg" alt="حمام مغربي"><div><h3>حمام مغربي ملكي</h3><small>صنفرة + صابون بلدي + ترطيب عميق</small></div><span class="p">150 ر.س</span><button class="bookbtn" onclick="pick('حمام مغربي')">احجزي</button></div>
+<div class="srv rev"><img src="private.jpg" alt="خصوصية"><div><h3>كبائن خصوصية VIP</h3><small>ستائر خاصة لكل عميلة — راحة تامة</small></div><span class="p">مجانًا</span><button class="bookbtn" onclick="pick('حجز كبينة VIP')">احجزي</button></div>
+<div class="srv rev"><img src="logo.jpg" alt="جمانة الشرق"><div><h3>صبغة وبروتين</h3><small>ألوان عصرية + معالجات إيطالية</small></div><span class="p">حسب الطول</span><button class="bookbtn" onclick="pick('صبغة وبروتين')">احجزي</button></div>
+<h2 class="sec rev">من أجوائنا 📸</h2><p class="sub rev">جولة داخل الصالون</p>
+<div class="gallery rev">
+<div class="g"><img src="main.jpg" alt="الصالون"></div>
+<div class="g"><img src="bath.jpg" alt="الحمام المغربي"></div>
+<div class="g"><img src="private.jpg" alt="الخصوصية"></div>
+<div class="g"><img src="logo.jpg" alt="اللوجو"></div>
+</div>
+<h2 class="sec rev">قالوا عنّا</h2><p class="sub rev">آراء عميلاتنا</p>
+<div class="tst rev"><div class="stars">★★★★★</div><p>"مكان راقي وهادي ونظيف — تعامل راقي من الاستقبال للختام"</p><b>— عميلة جمانة الشرق</b></div>
+<div class="tst rev"><div class="stars">★★★★★</div><p>"السشوار طلع مضبوط والضيافة حلوة — راح أكرر التجربة"</p><b>— عميلة جمانة الشرق</b></div>
+<h2 class="sec rev">أسئلة شائعة</h2>
+<details class="rev"><summary>هل الحجز مؤكد بدفع؟</summary><p>نعم، عرَبون 30 ر.س يُخصم من قيمة الخدمة — STC Pay / مدى / Apple Pay.</p></details>
+<details class="rev"><summary>هل في خصوصية تامة؟</summary><p>نعم، كبائن بستائر خاصة والصالون نسائي بالكامل.</p></details>
+<details class="rev"><summary>كم يستغرق الحمام المغربي؟</summary><p>حوالي 60-90 دقيقة حسب الباقة المختارة.</p></details>
+<h2 class="sec rev" id="book">احجزي موعدك</h2><p class="sub rev">الخطوة الأولى مجانية</p>
+<form class="rev" onsubmit="send(event)">
+<input id="n" placeholder="الاسم الكريم" required>
+<select id="s"><option>سشوار وتصفيف — 43 ر.س+</option><option>حمام مغربي ملكي — 150 ر.س</option><option>صبغة وبروتين — حسب الطول</option><option>باقة العروس — 1,200 ر.س</option><option>حجز كبينة VIP</option></select>
+<input type="date" required>
+<select id="t"><option>10:00 صباحًا</option><option>12:00 ظهرًا</option><option>4:00 عصرًا</option><option>6:00 مساءً</option><option>8:00 مساءً</option></select>
+<textarea rows="2" placeholder="ملاحظات (اختياري)"></textarea>
+<button class="wa">✅ تأكيد الحجز عبر واتساب</button>
+<button type="button" class="wa pay" onclick="deposit()">💳 ادفعي عربون 30 ر.س — STC Pay / مدى</button>
+</form>
+</div>
+<div class="foot">📍 الرياض | 🕐 السبت–الخميس 10ص – 10م<br>📱 واتساب: 05XXXXXXXX | @jumant.alsharq</div>
+<a class="fab" href="https://wa.me/9665XXXXXXXX?text=السلام عليكم، أبي أحجز موعد">💬</a>
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rev,.stat').forEach(el=>io.observe(el));
+const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;cio.unobserve(e.target);const el=e.target,end=parseFloat(el.dataset.n),t0=performance.now();(function tick(t){const p=Math.min((t-t0)/1400,1);el.textContent=Math.round(end*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(tick)})(t0)}),{threshold:.5});
+document.querySelectorAll('.cnt').forEach(el=>cio.observe(el));
+function pick(s){document.getElementById('s').value=s;document.getElementById('book').scrollIntoView({behavior:'smooth'})}
+function send(e){e.preventDefault();const n=document.getElementById('n').value,s=document.getElementById('s').value,t=document.getElementById('t').value;window.open('https://wa.me/9665XXXXXXXX?text='+encodeURIComponent('طلب حجز جديد 🌸%0Aالاسم: '+n+'%0Aالخدمة: '+s+'%0Aالوقت المفضل: '+t))}
+function deposit(){const n=document.getElementById('n').value||'';window.open('https://wa.me/9665XXXXXXXX?text='+encodeURIComponent('أرغب بدفع عربون الحجز (30 ر.س)%0Aالاسم: '+n+'%0Aرقم STC Pay من فضلكم 🌸'))}
+</script>
+</body></html>
